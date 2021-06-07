@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite parallel="methods" data-provider-thread-count="2" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="com.Qa.Redfin.PageTests.PropertiesPageTest">
+      <class name="com.Qa.Redfin.PageTests.HomePageTest">
         <methods>
           <include name="closeReport"/>
-          <include name="verifyHomes"/>
-          <include name="tearDown"/>
-          <include name="validatepage"/>
-          <include name="CreateReport"/>
-          <include name="SelectMinMaxPrices"/>
+          <include name="validatePopUp"/>
           <include name="initializeBrowser"/>
+          <include name="CreateReport"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.Qa.Redfin.PageTests.PropertiesPageTest -->
+      </class> <!-- com.Qa.Redfin.PageTests.HomePageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

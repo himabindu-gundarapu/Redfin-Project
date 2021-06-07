@@ -61,12 +61,22 @@ public class HomePageTest extends TestBase
 		Assert.assertTrue(b);
 		test.log(LogStatus.INFO, "popup displayed");
 	}
-	@Test(priority =4)
+	@Test(priority =4,dataProvider="searchKey")
 	
-	public void clickOncity() 
+	public void clickOncity(String city) 
 	{	
-		homePageObj.listFromPopup("Sunnyvale,CA,USA");
+		homePageObj.listFromPopup(city);
 		test.log(LogStatus.INFO, " clicked on Sunnyvale,CA,USA from");
+	}
+	@DataProvider(name ="searchKey",parallel=true)
+	public Object[][] getDataFromDataProvider()
+	{
+		String s1 = props.getProperty("city1");
+		String s2 = props.getProperty("city2");
+		return new Object[][] {
+			{s1},
+			{s2}
+		};
 	}
 	
 	@AfterClass

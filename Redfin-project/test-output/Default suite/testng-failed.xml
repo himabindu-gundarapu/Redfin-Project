@@ -8,7 +8,7 @@
           <include name="closeReport"/>
           <include name="initializeBrowser"/>
           <include name="CreateReport"/>
-          <include name="clickOncity"/>
+          <include name="clickOncity" invocation-numbers="1"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- com.Qa.Redfin.PageTests.HomePageTest -->

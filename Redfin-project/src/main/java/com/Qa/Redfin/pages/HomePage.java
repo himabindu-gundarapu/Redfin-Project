@@ -47,6 +47,7 @@ public class HomePage extends TestBase {
 	// To get all lists from did you mean pop up
 	public PropertiesPage listFromPopup(String text)
 	{
+		System.out.println("size : "+listFromPopup.size());
 		for(int i =0; i< listFromPopup.size();i++) 
 		{
 			
