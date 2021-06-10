@@ -8,7 +8,7 @@
           <include name="closeReport"/>
           <include name="tearDown"/>
           <include name="CreateReport"/>
-          <include name="DisplaypropertiesForGivenCity" invocation-numbers="1"/>
+          <include name="DisplaypropertiesForGivenCity" invocation-numbers="0"/>
           <include name="initializeBrowser"/>
         </methods>
       </class> <!-- com.Qa.Redfin.PageTests.PropertiesPageTest -->

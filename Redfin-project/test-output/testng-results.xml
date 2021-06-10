@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="6" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-09T20:46:19 PDT" name="Suite" finished-at="2021-06-09T20:48:38 PDT" duration-ms="138717">
+  <suite started-at="2021-06-09T22:47:44 PDT" name="Default suite" finished-at="2021-06-09T22:48:49 PDT" duration-ms="65065">
     <groups>
     </groups>
-    <test started-at="2021-06-09T20:46:19 PDT" name="Test" finished-at="2021-06-09T20:48:38 PDT" duration-ms="138717">
+    <test started-at="2021-06-09T22:47:44 PDT" name="Default test" finished-at="2021-06-09T22:48:49 PDT" duration-ms="65065">
       <class name="com.Qa.Redfin.PageTests.HomePageTest">
-        <test-method is-config="true" signature="CreateReport()[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@6fa51cd4]" started-at="2021-06-09T20:46:19 PDT" name="CreateReport" finished-at="2021-06-09T20:46:19 PDT" duration-ms="599" status="PASS">
+        <test-method is-config="true" signature="CreateReport()[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@2767e23c]" started-at="2021-06-09T22:47:44 PDT" name="CreateReport" finished-at="2021-06-09T22:47:44 PDT" duration-ms="165" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateReport -->
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@6fa51cd4]" started-at="2021-06-09T20:46:19 PDT" name="initializeBrowser" finished-at="2021-06-09T20:46:25 PDT" duration-ms="5344" status="PASS">
+        <test-method is-config="true" signature="collectLogs()[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@2767e23c]" started-at="2021-06-09T22:47:44 PDT" name="collectLogs" finished-at="2021-06-09T22:47:45 PDT" duration-ms="297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- collectLogs -->
+        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@2767e23c]" started-at="2021-06-09T22:47:45 PDT" name="initializeBrowser" finished-at="2021-06-09T22:47:50 PDT" duration-ms="5372" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="selectGivenCity(java.lang.String)[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@6fa51cd4]" started-at="2021-06-09T20:46:25 PDT" name="selectGivenCity" data-provider="searchKey" finished-at="2021-06-09T20:46:49 PDT" duration-ms="24146" status="PASS">
+        <test-method signature="selectGivenCity(java.lang.String)[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@2767e23c]" started-at="2021-06-09T22:47:50 PDT" name="selectGivenCity" data-provider="searchKey" finished-at="2021-06-09T22:48:14 PDT" duration-ms="23764" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,15 +30,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectGivenCity -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@6fa51cd4]" started-at="2021-06-09T20:46:49 PDT" name="teardown" finished-at="2021-06-09T20:46:49 PDT" duration-ms="62" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@2767e23c]" started-at="2021-06-09T22:48:14 PDT" name="teardown" finished-at="2021-06-09T22:48:14 PDT" duration-ms="94" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@6fa51cd4]" started-at="2021-06-09T20:46:49 PDT" name="initializeBrowser" finished-at="2021-06-09T20:46:54 PDT" duration-ms="4660" status="PASS">
+        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@2767e23c]" started-at="2021-06-09T22:48:14 PDT" name="initializeBrowser" finished-at="2021-06-09T22:48:19 PDT" duration-ms="4680" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="selectGivenCity(java.lang.String)[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@6fa51cd4]" started-at="2021-06-09T20:46:54 PDT" name="selectGivenCity" data-provider="searchKey" finished-at="2021-06-09T20:47:17 PDT" duration-ms="23788" status="PASS">
+        <test-method signature="selectGivenCity(java.lang.String)[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@2767e23c]" started-at="2021-06-09T22:48:19 PDT" name="selectGivenCity" data-provider="searchKey" finished-at="2021-06-09T22:48:49 PDT" duration-ms="30704" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,55 +49,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectGivenCity -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@6fa51cd4]" started-at="2021-06-09T20:47:17 PDT" name="teardown" finished-at="2021-06-09T20:47:18 PDT" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@2767e23c]" started-at="2021-06-09T22:48:49 PDT" name="teardown" finished-at="2021-06-09T22:48:49 PDT" duration-ms="123" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="closeReport()[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@6fa51cd4]" started-at="2021-06-09T20:48:38 PDT" name="closeReport" finished-at="2021-06-09T20:48:39 PDT" duration-ms="249" status="PASS">
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:com.Qa.Redfin.PageTests.HomePageTest@2767e23c]" started-at="2021-06-09T22:48:50 PDT" name="closeReport" finished-at="2021-06-09T22:48:50 PDT" duration-ms="220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeReport -->
       </class> <!-- com.Qa.Redfin.PageTests.HomePageTest -->
-      <class name="com.Qa.Redfin.PageTests.PropertiesPageTest">
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:com.Qa.Redfin.PageTests.PropertiesPageTest@1750fbeb]" started-at="2021-06-09T20:47:18 PDT" name="initializeBrowser" finished-at="2021-06-09T20:47:22 PDT" duration-ms="4586" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="DisplaypropertiesForGivenCity(java.lang.String)[pri:0, instance:com.Qa.Redfin.PageTests.PropertiesPageTest@1750fbeb]" started-at="2021-06-09T20:47:22 PDT" name="DisplaypropertiesForGivenCity" data-provider="searchKey" finished-at="2021-06-09T20:47:49 PDT" duration-ms="26831" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sunnyvale, CA, USA]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DisplaypropertiesForGivenCity -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Qa.Redfin.PageTests.PropertiesPageTest@1750fbeb]" started-at="2021-06-09T20:47:49 PDT" name="tearDown" finished-at="2021-06-09T20:47:49 PDT" duration-ms="161" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:com.Qa.Redfin.PageTests.PropertiesPageTest@1750fbeb]" started-at="2021-06-09T20:47:49 PDT" name="initializeBrowser" finished-at="2021-06-09T20:47:54 PDT" duration-ms="4433" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="DisplaypropertiesForGivenCity(java.lang.String)[pri:0, instance:com.Qa.Redfin.PageTests.PropertiesPageTest@1750fbeb]" started-at="2021-06-09T20:47:54 PDT" name="DisplaypropertiesForGivenCity" data-provider="searchKey" finished-at="2021-06-09T20:48:38 PDT" duration-ms="44384" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sunnyvale, TX, USA]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DisplaypropertiesForGivenCity -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Qa.Redfin.PageTests.PropertiesPageTest@1750fbeb]" started-at="2021-06-09T20:48:38 PDT" name="tearDown" finished-at="2021-06-09T20:48:38 PDT" duration-ms="138" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.Qa.Redfin.PageTests.PropertiesPageTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

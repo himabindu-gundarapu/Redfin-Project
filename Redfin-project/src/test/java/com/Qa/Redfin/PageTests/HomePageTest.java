@@ -2,7 +2,7 @@ package com.Qa.Redfin.PageTests;
 import java.io.IOException;
 import java.util.Properties;
 
-
+import org.apache.logging.log4j.LogManager;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -16,6 +16,9 @@ import com.Qa.Redfin.Utils.ConfigPropertyReader;
 import com.Qa.Redfin.pages.HomePage;
 import com.Qa.Redfin.pages.PropertiesPage;
 import com.relevantcodes.extentreports.LogStatus;
+
+import jdk.internal.org.jline.utils.Log;
+import jdk.jfr.internal.Logger;
 public class HomePageTest extends TestBase
 {	
 	//WebDriver driver;
@@ -24,6 +27,10 @@ public class HomePageTest extends TestBase
 	public HomePageTest() 
 	{
 		super();
+	}
+	@BeforeClass
+	public void collectLogs() {
+		logger = LogManager.getLogger(HomePageTest.class);
 	}
 	@BeforeMethod
 	public void initializeBrowser() 
@@ -46,6 +53,7 @@ public class HomePageTest extends TestBase
 		String expected  = "Real Estate, Homes for Sale, MLS Listings, Agents | Redfin";
 		Assert.assertEquals(actual,expected);
 		System.out.println("homepage title is :"+actual);
+		logger.info("*****************************Home page title validated*********************");
 		test.log(LogStatus.PASS, "home page title validated");
 		// To enter text in searchbox
 		homePageObj.EnterText(props.getProperty("searchboxText"));
@@ -57,6 +65,7 @@ public class HomePageTest extends TestBase
 		//To display and click on given city
 		homePageObj.listFromPopup(city);
 		test.log(LogStatus.INFO, " clicked on Sunnyvale,CA,USA from");
+	
 	}
 	@DataProvider(name ="searchKey")
 	public Object[][] getDataFromDataProvider()

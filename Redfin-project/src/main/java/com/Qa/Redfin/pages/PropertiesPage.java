@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.Qa.Redfin.Base.TestBase;
+import com.Qa.Redfin.CustomExceptions.FrameworkExceptions;
 public class PropertiesPage extends TestBase {
 	
 	Properties props;
@@ -49,7 +50,9 @@ public class PropertiesPage extends TestBase {
 			maxPrice.click();
 			je.executeScript("document.getElementsByClassName('option')["+maxIndex+"].click();" );
 	}
-	public void displaylisitings() {
+	public void displaylisitings() 
+	{
+		try {
 			if(PropertiesList.size()>0) 
 			{
 				for(int i =0; i< PropertiesList.size();i++) 
@@ -57,12 +60,14 @@ public class PropertiesPage extends TestBase {
 					System.out.println("Property :" +PropertiesList.get(i).getText());
 				}
 			}
-			else 
+			}
+			catch(Exception e) 
 			{
-				System.out.println("Error : no properties listed");
+				throw new FrameworkExceptions("Error : no properties listed");
 			}
-			}
+				//System.out.println("Error : no properties listed");
+
 	}
-	
+}
 	
 

@@ -3,6 +3,8 @@ package com.Qa.Redfin.Base;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -15,8 +17,9 @@ import Factory.DriverFactory;
 
 public class TestBase extends CommonUtils 
 {
+	private static final String PropertyConfigurator = null;
 	public static Properties props;
-
+	public static Logger logger;
 	public static WebDriver driver;
 	public static void launchBrowser() {
 		props= new Properties();
