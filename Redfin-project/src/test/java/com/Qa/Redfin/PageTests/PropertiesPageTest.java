@@ -5,7 +5,9 @@ import java.util.Properties;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -22,7 +24,7 @@ public class PropertiesPageTest extends TestBase
 	HomePage homePageObj;
 	PropertiesPage propertiesPageObj;
 	Properties props;
-	@BeforeClass()
+	@BeforeMethod
 	public void initializeBrowser() 
 	{
 		launchBrowser();
@@ -36,58 +38,49 @@ public class PropertiesPageTest extends TestBase
 				}
 		homePageObj = new HomePage(driver);
 		homePageObj.EnterText(props.getProperty("searchboxText"));
-	}
-	@Test(priority =1, dataProvider="searchKey")
-	public void enterCityname(String city) 
-	{
-		propertiesPageObj = homePageObj.listFromPopup(city);
-		
-	}
+		}
 	@DataProvider(name ="searchKey")
 	public Object[][] getDataFromDataProvider()
 	{
-		String s1 = props.getProperty("city1");
-		String s2 = props.getProperty("city2");
 		return new Object[][] {
-			{s1},
-			{s2}
+			{"Sunnyvale, CA, USA"},
+			{"Sunnyvale, TX, USA"}
 		};
 	}
-	@Test(priority =2)
-	public void validatepage() {
-		String city = props.getProperty("city1");
+
+	@Test(dataProvider ="searchKey")
+	public void DisplaypropertiesForGivenCity(String city) {
+		propertiesPageObj = homePageObj.listFromPopup(city);
+		//To validate page titles of given cities
 		if(city.equalsIgnoreCase("Sunnyvale, CA, USA"))
 		{
 			String expectedTitle = "Sunnyvale Homes for Sale: Sunnyvale, CA Real Estate | Redfin";
 			String actual = propertiesPageObj.validatePageTitle();
 			Assert.assertEquals(actual, expectedTitle);
 			System.out.println("CAlifornia state page title validated");
-			test.log(LogStatus.PASS, "California Page title validated");
+			test.log(LogStatus.INFO, "California Page title validated");
 		}
-		else {
-			String expectedTitle = "Sunnyvale Homes for Sale: Sunnyvale, Tx Real Estate | Redfin";
+		else if(city.equalsIgnoreCase("Sunnyvale, TX, USA"))
+		{
+			String expectedTitle = "Sunnyvale Homes for Sale: Sunnyvale, TX Real Estate | Redfin";
 			String actualTitle = propertiesPageObj.validatePageTitle();
 			Assert.assertEquals(actualTitle, expectedTitle);
 			System.out.println("Texas state page title validated");
-			test.log(LogStatus.PASS, "Texas Page title validated");
+			test.log(LogStatus.INFO, "Texas Page title validated");
 		}
-		
-	}
-	@Test(priority =3)
-	public void SelectMinMaxPrices() {
+		// select max and minium prices
 		String minPrice = props.getProperty("minDropdownIndex");
 		int min = Integer.parseInt(minPrice);
 		String maxPrice = props.getProperty("MaxDropDownIndex");
 		int max = Integer.parseInt(maxPrice);
 		propertiesPageObj.selectPrice(min, max);
-		}
-	@Test(priority =4)
-	public  void verifyHomes() {
+		// To display Listings
 		propertiesPageObj.displaylisitings();
+		test.log(LogStatus.PASS, "Testcase passed");
 	}
-	@AfterClass
+	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+		driver.close();
 	}
 	
 }

@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.Qa.Redfin.Base.TestBase;
 import com.Qa.Redfin.Utils.CommonUtils;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class HomePage extends TestBase {
 
@@ -50,12 +51,17 @@ public class HomePage extends TestBase {
 		System.out.println("size : "+listFromPopup.size());
 		for(int i =0; i< listFromPopup.size();i++) 
 		{
-			
+			System.out.println(" i = " +i);
+			System.out.println("list :" +listFromPopup.get(i).getText());
 			if(listFromPopup.get(i).getText().equalsIgnoreCase(text)) 
 			{
 				System.out.println("list from did you mean popup:" +listFromPopup.get(i).getText());
 				listFromPopup.get(i).click();
+				test.log(LogStatus.INFO, "clicked on given city");
 				
+			}
+			else {
+				System.out.println("list from did you mean popup from outside loop:" +listFromPopup.get(i).getText());
 			}
 		}
 		return  new PropertiesPage(driver);

@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Qa.Redfin.PageTests.HomePageTest">
+      <class name="com.Qa.Redfin.PageTests.PropertiesPageTest">
         <methods>
           <include name="closeReport"/>
-          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
           <include name="CreateReport"/>
-          <include name="clickOncity" invocation-numbers="1"/>
-          <include name="teardown"/>
+          <include name="DisplaypropertiesForGivenCity" invocation-numbers="1"/>
+          <include name="initializeBrowser"/>
         </methods>
-      </class> <!-- com.Qa.Redfin.PageTests.HomePageTest -->
+      </class> <!-- com.Qa.Redfin.PageTests.PropertiesPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

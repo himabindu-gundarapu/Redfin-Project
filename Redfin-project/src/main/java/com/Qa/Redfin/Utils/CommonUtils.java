@@ -55,6 +55,7 @@ public class CommonUtils {
 		} else 
 		{
 			System.out.println("Textbox is found ");
+			element.click();
 			element.sendKeys(text);
 		}
 	}
